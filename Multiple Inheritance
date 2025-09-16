@@ -1,0 +1,47 @@
+// Name: Barkha Kumari
+// PRN: 24070123029
+// Branch: EnTC A1
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class 1
+class Vehicle {
+public:
+    void showType() const {
+        cout << "This is a vehicle." << endl;
+    }
+};
+
+// Base class 2
+class Device {
+public:
+    void showName() const {
+        cout << "This is a device." << endl;
+    }
+};
+
+// Derived class with multiple inheritance
+class SmartCar : public Vehicle, public Device {
+public:
+    void showDetails() const {
+        showType();   // from Vehicle
+        showName();   // from Device
+        cout << "This is a smart car." << endl;
+    }
+};
+
+int main() {
+    SmartCar myCar;
+    myCar.showDetails();
+    return 0;
+}
+
+/*
+SAMPLE OUTPUT ::
+
+This is a vehicle.
+This is a device.
+This is a smart car.
+*/
