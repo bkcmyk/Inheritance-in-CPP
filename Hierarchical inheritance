@@ -1,0 +1,95 @@
+// Name: Barkha Kumari
+// PRN: 24070123029
+// Branch: EnTC A1
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal {
+public:
+    void eat() {
+        cout << "This animal eats food." << endl;
+    }
+};
+
+// Derived class from Animal
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "The dog barks." << endl;
+    }
+};
+
+// Derived class from Animal
+class Cat : public Animal {
+public:
+    void meow() {
+        cout << "The cat meows." << endl;
+    }
+};
+
+// Derived class from Cat
+class WhiteCat : public Cat {
+public:
+    void colour() {
+        cout << "The white cat is white." << endl;
+    }
+};
+
+// Derived class from Cat
+class BlackCat : public Cat {
+public:
+    void colour() {
+        cout << "The black cat is black." << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    Cat cat;
+    WhiteCat wc;
+    BlackCat bc;
+
+    cout << "Dog actions:" << endl;
+    dog.eat();
+    dog.bark();
+
+    cout << "\nCat actions:" << endl;
+    cat.eat();
+    cat.meow();
+
+    cout << "\nWhite Cat actions:" << endl;
+    wc.eat();
+    wc.meow();
+    wc.colour();
+
+    cout << "\nBlack Cat actions:" << endl;
+    bc.eat();
+    bc.meow();
+    bc.colour();
+
+    return 0;
+}
+
+/*
+SAMPLE OUTPUT ::
+
+Dog actions:
+This animal eats food.
+The dog barks.
+
+Cat actions:
+This animal eats food.
+The cat meows.
+
+White Cat actions:
+This animal eats food.
+The cat meows.
+The white cat is white.
+
+Black Cat actions:
+This animal eats food.
+The cat meows.
+The black cat is black.
+*/
