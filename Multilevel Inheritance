@@ -1,0 +1,54 @@
+// Name: Barkha Kumari
+// PRN: 24070123029
+// Branch: EnTC A1
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Animal {
+public:
+    void eat() {
+        cout << "I can eat." << endl;
+    }
+    void sleep() {
+        cout << "I can sleep." << endl;
+    }
+};
+
+// Derived class from Animal
+class Mammal : public Animal {
+public:
+    void walk() {
+        cout << "I can walk." << endl;
+    }
+};
+
+// Derived class from Mammal
+class Dog : public Mammal {
+public:
+    void bark() {
+        cout << "I can bark." << endl;
+    }
+};
+
+int main() {
+    Dog myDog;
+
+    myDog.eat();    // inherited from Animal
+    myDog.sleep();  // inherited from Animal
+    myDog.walk();   // inherited from Mammal
+    myDog.bark();   // defined in Dog
+
+    return 0;
+}
+
+/*
+SAMPLE OUTPUT ::
+
+I can eat.
+I can sleep.
+I can walk.
+I can bark.
+*/
